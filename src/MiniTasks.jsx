@@ -274,10 +274,10 @@ const [diceValues, setDiceValues] = useState([]);
 {/* Dice Roller */}
 
   <div className="min-h-[800px] bg-white/80 p-6 rounded-2xl backdrop-blur text-black text-center">
-       <h2 className="text-3xl font-semibold mb-4 mt-50">🎲 Dice Roller</h2>
+       <h2 className="text-3xl font-semibold mb-14 mt-40">🎲 Dice Roller</h2>
  
        <div className="mb-4">
-         <label className="block mb-2 font-medium">Enter number of dice to roll:</label>
+         <label className="block mb-5 font-medium">Enter A number For Dice to roll:</label>
          <input
            type="number"
            min="1"
