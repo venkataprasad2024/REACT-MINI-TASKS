@@ -188,7 +188,7 @@ const [diceValues, setDiceValues] = useState([]);
         {/* To-Do List */}
 
 
-        <div className="min-h-[800px] bg-white/80 p-6 rounded-2xl backdrop-blur text-black text-center">
+        <div className="min-h-[500px] bg-white/80 p-6 rounded-2xl backdrop-blur text-black text-center">
           <h2 className="text-3xl mt-50 font-semibold mb-6">📝 To-Do List</h2>
           <div className="flex flex-col mt-10 md:flex-row justify-center items-center gap-4">
             <input value={newTask} onChange={(e) => setNewTask(e.target.value)} className="p-3 w-full md:w-1/2 rounded bg-gray-100 text-black" placeholder="Add task..." />
@@ -233,7 +233,7 @@ const [diceValues, setDiceValues] = useState([]);
 
         {/* Advanced BMI */}
 
-        <div className="min-h-[800px] bg-white/80 p-8 rounded-2xl backdrop-blur text-black">
+        <div className="min-h-[500px] bg-white/80 p-8 rounded-2xl backdrop-blur text-black">
           <h2 className="text-3xl font-semibold md:ml-80 sm:ml-30 mt-5 mb-60">⚖️ Advanced BMI Checker</h2>
           <div className="grid md:grid-cols-2 gap-6"> <h1 className="absolute top-70 left-40 font-bold text-2xl">Check Your BMI</h1>
             <div className="space-y-4">
@@ -264,7 +264,7 @@ const [diceValues, setDiceValues] = useState([]);
 
 
         {/* Quote of the Minute with background */}
-        <div className="min-h-[800px] p-6 rounded-2xl backdrop-blur text-white text-center shadow-2xl" style={quoteBgStyle}>
+        <div className="min-h-[700px] p-6 rounded-2xl backdrop-blur text-white text-center shadow-2xl" style={quoteBgStyle}>
           <h2 className="text-3xl font-semibold mb-4">🧘 Quote of the Minute</h2>
           <p className="text-2xl italic font-medium">"{quotes[quoteIndex]}"</p>
         </div>
@@ -273,7 +273,7 @@ const [diceValues, setDiceValues] = useState([]);
 
 {/* Dice Roller */}
 
-  <div className="min-h-[800px] bg-white/80 p-6 rounded-2xl backdrop-blur text-black text-center">
+  <div className="min-h-[500px] bg-white/80 p-6 rounded-2xl backdrop-blur text-black text-center">
        <h2 className="text-3xl font-semibold mb-14 mt-40">🎲 Dice Roller</h2>
  
        <div className="mb-4">
@@ -316,7 +316,7 @@ const [diceValues, setDiceValues] = useState([]);
 
         {/* Form Task */}
 
-        <div className="min-h-[800px] bg-gradient-to-br from-white/80 to-sky-100 p-8 rounded-2xl shadow-2xl text-black">
+        <div className="min-h-[500px] bg-gradient-to-br from-white/80 to-sky-100 p-8 rounded-2xl shadow-2xl text-black">
           <h2 className="text-4xl font-bold mb-10 mt-30 text-center text-sky-700">📬 Get in Touch</h2>
           <div className="grid md:grid-cols-2 gap-10">
             <form onSubmit={handleFormSubmit} className="space-y-6">
@@ -378,7 +378,7 @@ const [diceValues, setDiceValues] = useState([]);
         
 {/* Thank You Mentor Section */}
 
-<div className="min-h-[800px] bg-gradient-to-br from-purple-100 to-blue-100 p-10 rounded-2xl shadow-2xl text-center text-gray-800">
+<div className="min-h-[500px] bg-gradient-to-br from-purple-100 to-blue-100 p-10 rounded-2xl shadow-2xl text-center text-gray-800">
   <h2 className="text-4xl font-bold mt-7 mb-30  text-purple-800"> Thank You, Mentor</h2>
   <div className="flex flex-col md:flex-row items-center justify-center gap-10">
     <img
