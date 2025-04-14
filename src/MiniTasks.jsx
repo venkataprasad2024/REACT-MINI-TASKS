@@ -32,8 +32,13 @@ const quotes = [
  
 ];
 
+
+
+ 
 export default function App() {
   // State variables
+  const [diceCount, setDiceCount] = useState(1);
+const [diceValues, setDiceValues] = useState([]);
   const [gender, setGender] = useState("male");
   const [age, setAge] = useState("");
   const [bmiStatus, setBmiStatus] = useState("");
@@ -53,7 +58,17 @@ export default function App() {
   const [dice, setDice] = useState(1);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submittedData, setSubmittedData] = useState([]);
+  
 
+  //Dice task
+
+  const handleRoll = () => {
+    const rolls = Array.from({ length: diceCount }, () =>
+      Math.ceil(Math.random() * 6)
+    );
+    setDiceValues(rolls);
+  };
+  
   // Effect for changing the main background every 6 seconds
   useEffect(() => {
     const interval = setInterval(() => {
@@ -256,18 +271,45 @@ export default function App() {
 
 
 
+{/* Dice Roller */}
 
-        {/* Dice Roller */}
-
-        <div className="min-h-[800px] bg-white/80 p-6 rounded-2xl backdrop-blur text-black text-center">
-          <h2 className="text-3xl font-semibold mb-4 mt-50">🎲 Dice Roller</h2>
-          <img src={`public/0${dice}.png`} alt={`Dice ${dice}`} className="w-32 h-32 mx-auto mb-4" />
-          <h1 className="mb-5 font-bold">{dice}</h1>
-          <button onClick={() => setDice(Math.ceil(Math.random() * 6))} className="bg-purple-500 px-8 py-3 rounded cursor-pointer text-white hover:bg-purple-600">
-            <FaDice className="inline mr-2" />
-            Roll Dice
-          </button>
-        </div>
+  <div className="min-h-[800px] bg-white/80 p-6 rounded-2xl backdrop-blur text-black text-center">
+       <h2 className="text-3xl font-semibold mb-4 mt-50">🎲 Dice Roller</h2>
+ 
+       <div className="mb-4">
+         <label className="block mb-2 font-medium">Enter number of dice to roll:</label>
+         <input
+           type="number"
+           min="1"
+           max="10"
+           value={diceCount}
+           onChange={(e) => setDiceCount(Number(e.target.value))}
+           className="px-4 py-2 border rounded w-40 text-center"
+         />
+       </div>
+ 
+       <button
+         onClick={handleRoll}
+         className="bg-purple-500 px-8 py-3 rounded cursor-pointer text-white hover:bg-purple-600 mb-6"
+       >
+         <FaDice className="inline mr-2" />
+         Roll Dice
+       </button>
+ 
+       <div className="flex flex-wrap justify-center gap-4">
+         {diceValues.map((val, index) => (
+           <div key={index} className="flex flex-col items-center">
+             <img
+               src={`public/0${val}.png`}
+               alt={`Dice ${val}`}
+               className="w-20 h-20"
+             />
+             <span className="font-bold mt-2">{val}</span>
+           </div>
+         ))}
+       </div>
+     </div>
+  
 
 
 
